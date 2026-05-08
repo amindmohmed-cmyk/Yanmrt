@@ -55,8 +55,8 @@
         
         /* Movie Card Specific Styles */
         .movie-card {
-            width: 250px; 
-            height: 375px; 
+            width: 250px;
+            height: 375px;
             flex-shrink: 0;
             border-radius: 12px;
             overflow: hidden;
@@ -67,12 +67,36 @@
         .movie-card img {
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: cover;
             transition: transform 0.5s ease;
         }
         .movie-card:hover img {
             transform: scale(1.1);
         }
+        /* Grid movie cards override */
+        .movie-grid-card {
+            width: 100%;
+            height: 288px;
+            flex-shrink: unset;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        .movie-grid-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .movie-grid-card:hover img { transform: scale(1.1); }
+
+        @keyframes pulse-border {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(234,179,8,0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(234,179,8,0); }
+        }
+        .wc-pulse { animation: pulse-border 2s infinite; }
     </style>
 </head>
 <body>
@@ -93,7 +117,12 @@
                             <a href="#home" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Home</a>
                             <a href="#features" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Features</a>
                             <a href="#trending" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Trending</a>
+                            <a href="#movies" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Movies</a>
+                            <a href="#series" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Series</a>
                             <a href="#pricing" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Pricing</a>
+                            <a href="#trusted" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Reviews</a>
+                            <a href="#activation" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Activation</a>
+                            <a href="#guide" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Guide</a>
                             <a href="#contact" class="hover:text-red-500 transition-colors font-medium cursor-pointer no-underline text-white">Contact</a>
                         </div>
                     </div>
@@ -117,7 +146,12 @@
                     <a href="#home" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Home</a>
                     <a href="#features" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Features</a>
                     <a href="#trending" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Trending</a>
+                    <a href="#movies" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Movies</a>
+                    <a href="#series" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Series</a>
                     <a href="#pricing" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Pricing</a>
+                    <a href="#trusted" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Reviews</a>
+                    <a href="#activation" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Activation</a>
+                    <a href="#guide" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Guide</a>
                     <a href="#contact" class="text-lg py-2 hover:text-red-500 w-full text-center text-white no-underline">Contact</a>
                     <a href="https://wa.me/447878719652?text=I%20want%20iptv%20service" target="_blank" class="bg-red-600 w-full py-3 rounded-xl font-bold mt-2 text-white text-center block no-underline hover:bg-red-700 transition-colors">Get Started Now</a>
                 </div>
@@ -342,6 +376,172 @@
             </div>
         </section>
 
+        <!-- WORLD CUP BANNER -->
+        <section class="relative overflow-hidden bg-slate-950 border-t border-slate-800/50">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-gradient-to-br from-yellow-900/10 to-slate-950"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/60"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+            </div>
+            <div class="relative z-10 container mx-auto px-4 py-20 md:py-28">
+                <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                    <div class="flex-1 text-center md:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/40 text-yellow-400 text-xs font-bold tracking-widest uppercase mb-5">
+                            <span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-400"></span></span>
+                            FIFA World Cup 2026 — Live on YANMRT IPTV
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-5">
+                            <span class="text-white">Watch Every</span><br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500">World Cup Match</span><br>
+                            <span class="text-white">In 4K.</span>
+                        </h2>
+                        <p class="text-slate-300 text-lg mb-8 leading-relaxed max-w-xl">
+                            USA · Canada · Mexico — June 2026. Don't miss a single goal. Stream all <span class="text-white font-bold">104 matches LIVE</span> in crystal-clear 4K with zero buffering. All groups, all knockouts, the final.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="https://wa.me/447878719652?text=I%20want%20to%20watch%20World%20Cup%202026%20on%20YANMRT%20IPTV" target="_blank" class="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black rounded-xl font-black text-lg transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(234,179,8,0.35)] flex items-center justify-center gap-2 no-underline">
+                                <i data-lucide="trophy" class="w-5 h-5"></i> Get World Cup Access
+                            </a>
+                            <a href="#pricing" class="px-8 py-4 bg-slate-800/70 border border-slate-700 text-white rounded-xl font-bold text-lg hover:bg-slate-700/70 transition-all flex items-center justify-center gap-2 no-underline">
+                                View Plans <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 flex items-center justify-center w-full md:w-auto">
+                        <img src="world cup.png" alt="FIFA World Cup 2026" class="w-72 md:w-96 lg:w-[420px] object-contain drop-shadow-[0_0_40px_rgba(234,179,8,0.3)] rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOVIES SECTION -->
+        <section id="movies" class="py-24 bg-slate-950 relative overflow-hidden border-t border-slate-800/50">
+            <div class="absolute top-0 right-1/4 w-96 h-96 bg-purple-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="flex flex-col items-center text-center mb-12 gap-4">
+                    <div class="flex items-center gap-2 text-purple-400 font-bold">
+                        <i data-lucide="film" class="w-5 h-5"></i>
+                        <span class="tracking-widest uppercase text-sm">VOD Library</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white">Top Movies</h2>
+                    <p class="text-slate-400 max-w-xl">Thousands of blockbusters available on demand, in 4K. New titles added every week.</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune Part Two" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Dune: Part Two</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/iuFNMS8vlzsNxmqv4q5jX9cUbwN.jpg" alt="Barbie" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Barbie</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="The Batman" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">The Batman</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="Top Gun Maverick" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Top Gun: Maverick</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" alt="Avatar 2" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Avatar: Way of Water</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/NNxYkU70HPurnNCSiCjYAmacwm.jpg" alt="Mission Impossible" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Mission: Impossible 7</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" alt="Guardians Vol 3" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Guardians Vol. 3</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/fiVW06jE7z9YnO4trhaMEdclSiC.jpg" alt="Fast X" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Fast X</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Oppenheimer</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Interstellar</h3></div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10">
+                    <a href="https://wa.me/447878719652?text=I%20want%20access%20to%20the%20full%20movies%20library" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-bold text-lg transition-all transform hover:scale-105 no-underline shadow-[0_0_25px_rgba(147,51,234,0.3)]">
+                        <i data-lucide="film" class="w-5 h-5"></i> Browse Full Library
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERIES SECTION -->
+        <section id="series" class="py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden border-t border-slate-800/50">
+            <div class="absolute bottom-0 left-1/3 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="flex flex-col items-center text-center mb-12 gap-4">
+                    <div class="flex items-center gap-2 text-blue-400 font-bold">
+                        <i data-lucide="clapperboard" class="w-5 h-5"></i>
+                        <span class="tracking-widest uppercase text-sm">Binge-Worthy</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white">Top Series</h2>
+                    <p class="text-slate-400 max-w-xl">All seasons, all episodes. Stream the world's most acclaimed TV series in one place.</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg" alt="Game of Thrones" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Game of Thrones</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="The Last of Us" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">The Last of Us</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/z2yahl2uefxDCl0nogcRBstwruJ.jpg" alt="House of the Dragon" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">House of the Dragon</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/9PFonBhy4cQy7Jz20NpMygczOkv.jpg" alt="Wednesday" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Wednesday</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/vUUqzWa2LnHIVqkaKVn3nyfVpUT.jpg" alt="Peaky Blinders" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Peaky Blinders</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" alt="Stranger Things" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Stranger Things</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="Breaking Bad" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Breaking Bad</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/9gk7admal4zlWH9O9GLyxC0x0bE.jpg" alt="Inception" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Inception</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">The Dark Knight</h3></div>
+                    </div>
+                    <div class="movie-grid-card">
+                        <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="Fight Club" referrerpolicy="no-referrer" onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"><h3 class="text-white font-bold">Fight Club</h3></div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10">
+                    <a href="https://wa.me/447878719652?text=I%20want%20access%20to%20the%20full%20series%20library" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-lg transition-all transform hover:scale-105 no-underline shadow-[0_0_25px_rgba(37,99,235,0.3)]">
+                        <i data-lucide="clapperboard" class="w-5 h-5"></i> Browse All Series
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <section id="pricing" class="py-32 relative overflow-hidden bg-slate-950 pb-48">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/5 rounded-full blur-[120px]"></div>
             
@@ -362,7 +562,7 @@
                                 <h3 class="text-sm font-bold uppercase tracking-widest mb-2 text-slate-400">Starter</h3>
                                 <h4 class="text-2xl font-bold text-white mb-6">1 Month</h4>
                                 <div class="flex items-end gap-1">
-                                    <span class="text-xl text-slate-400 font-medium mb-2">$</span>
+                                    <span class="text-xl text-slate-400 font-medium mb-2">€</span>
                                     <span class="text-6xl font-black tracking-tighter text-slate-200">19</span>
                                     <span class="text-slate-500 font-medium mb-2">/total</span>
                                 </div>
@@ -385,9 +585,9 @@
                             
                             <div class="mb-8 relative z-10">
                                 <h3 class="text-sm font-bold uppercase tracking-widest mb-2 text-red-500">Ultimate Value</h3>
-                                <h4 class="text-2xl font-bold text-white mb-6">12 Months</h4>
+                                <h4 class="text-2xl font-bold text-white mb-6">1 Year</h4>
                                 <div class="flex items-end gap-1">
-                                    <span class="text-xl text-slate-400 font-medium mb-2">$</span>
+                                    <span class="text-xl text-slate-400 font-medium mb-2">€</span>
                                     <span class="text-6xl font-black tracking-tighter text-white">65</span>
                                     <span class="text-slate-500 font-medium mb-2">/total</span>
                                 </div>
@@ -411,8 +611,8 @@
                                 <h3 class="text-sm font-bold uppercase tracking-widest mb-2 text-slate-400">Standard</h3>
                                 <h4 class="text-2xl font-bold text-white mb-6">6 Months</h4>
                                 <div class="flex items-end gap-1">
-                                    <span class="text-xl text-slate-400 font-medium mb-2">$</span>
-                                    <span class="text-6xl font-black tracking-tighter text-slate-200">45</span>
+                                    <span class="text-xl text-slate-400 font-medium mb-2">€</span>
+                                    <span class="text-6xl font-black tracking-tighter text-slate-200">39</span>
                                     <span class="text-slate-500 font-medium mb-2">/total</span>
                                 </div>
                             </div>
@@ -428,6 +628,592 @@
                     </div>
 
                 </div>
+            </div>
+        </section>
+
+        <!-- TRUSTED BY CLIENTS -->
+        <section id="trusted" class="py-24 bg-slate-950 relative overflow-hidden border-t border-slate-800/50">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-yellow-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold tracking-widest uppercase mb-5">
+                        <i data-lucide="star" class="w-3 h-3 fill-current"></i> Real Customers · Real Reviews
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Trusted by Thousands</h2>
+                    <p class="text-slate-400 text-lg max-w-xl mx-auto">Over 10,000 happy subscribers worldwide. Here's what they say.</p>
+
+                    <!-- Star rating summary -->
+                    <div class="flex items-center justify-center gap-3 mt-6">
+                        <div class="flex gap-1">
+                            <i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-current"></i>
+                        </div>
+                        <span class="text-white font-black text-2xl">4.9</span>
+                        <span class="text-slate-400 text-sm">/ 5.0 — 10,000+ reviews</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4">
+                        <div class="flex gap-1">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">"Watched every Premier League game this season with zero buffering. The 4K quality is insane — feels like I'm at the stadium. Best IPTV I've ever used, period."</p>
+                        <div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-800">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center font-black text-white text-sm">JM</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">James M.</div>
+                                <div class="text-slate-500 text-xs">New York, USA · 12 months plan</div>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 font-medium">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4">
+                        <div class="flex gap-1">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">"Setup took less than 5 minutes. Support replied instantly on WhatsApp and helped me configure it on my Firestick. Already recommended it to all my family."</p>
+                        <div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-800">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center font-black text-white text-sm">SK</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Sofia K.</div>
+                                <div class="text-slate-500 text-xs">London, UK · 6 months plan</div>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 font-medium">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4">
+                        <div class="flex gap-1">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">"I cancelled my Netflix and cable subscription after getting YANMRT. 60,000 channels, all the movies and series I want — for a fraction of the price. Unbeatable value."</p>
+                        <div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-800">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center font-black text-white text-sm">AR</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Ahmed R.</div>
+                                <div class="text-slate-500 text-xs">Toronto, Canada · 12 months plan</div>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 font-medium">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4">
+                        <div class="flex gap-1">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">"UFC PPV, NBA playoffs, Champions League — all live, no lag. I've tried 4 other IPTV services before and none come close. This one is on another level."</p>
+                        <div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-800">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center font-black text-white text-sm">DL</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Diego L.</div>
+                                <div class="text-slate-500 text-xs">Miami, USA · 12 months plan</div>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 font-medium">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4">
+                        <div class="flex gap-1">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">"The VOD library is massive — every movie and series I searched for was there. Picture quality on my Samsung 4K TV is absolutely stunning. Highly recommended!"</p>
+                        <div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-800">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-red-400 flex items-center justify-center font-black text-white text-sm">NB</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Nora B.</div>
+                                <div class="text-slate-500 text-xs">Paris, France · 6 months plan</div>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 font-medium">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4">
+                        <div class="flex gap-1">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">"Customer service is amazing. Had a small issue at midnight and they fixed it in minutes via WhatsApp. The service itself never goes down. Been a subscriber for 2 years."</p>
+                        <div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-800">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center font-black text-white text-sm">KT</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Karl T.</div>
+                                <div class="text-slate-500 text-xs">Manchester, UK · 12 months plan</div>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 font-medium">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ACTIVATION STEPS -->
+        <section id="activation" class="py-24 bg-gradient-to-b from-slate-900 to-slate-950 relative overflow-hidden border-t border-slate-800/50">
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-red-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold tracking-widest uppercase mb-5">
+                        <i data-lucide="zap" class="w-3 h-3"></i> Ready in Under 5 Minutes
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">How to Activate</h2>
+                    <p class="text-slate-400 text-lg max-w-xl mx-auto">Simple steps to get you streaming on any device instantly.</p>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <!-- Steps -->
+                    <div class="grid md:grid-cols-4 gap-6 mb-16 relative">
+                        <!-- connector line desktop -->
+                        <div class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-red-600/0 via-red-600/50 to-red-600/0 z-0"></div>
+
+                        <div class="relative z-10 flex flex-col items-center text-center">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center mb-5 shadow-[0_0_25px_rgba(220,38,38,0.35)]">
+                                <i data-lucide="message-circle" class="w-9 h-9 text-white"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 md:top-0 md:right-auto md:left-1/2 md:-translate-x-1/2 w-7 h-7 rounded-full bg-red-600 text-white text-xs font-black flex items-center justify-center border-2 border-slate-900">1</div>
+                            <h3 class="text-white font-bold text-lg mb-2">Contact Us</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Message us on WhatsApp and choose your plan. We reply instantly.</p>
+                        </div>
+
+                        <div class="relative z-10 flex flex-col items-center text-center">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center mb-5 shadow-[0_0_25px_rgba(234,88,12,0.35)]">
+                                <i data-lucide="credit-card" class="w-9 h-9 text-white"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 md:top-0 md:right-auto md:left-1/2 md:-translate-x-1/2 w-7 h-7 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center border-2 border-slate-900">2</div>
+                            <h3 class="text-white font-bold text-lg mb-2">Choose & Pay</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Pick your plan (1, 6 or 12 months) and complete your secure payment.</p>
+                        </div>
+
+                        <div class="relative z-10 flex flex-col items-center text-center">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center mb-5 shadow-[0_0_25px_rgba(234,179,8,0.35)]">
+                                <i data-lucide="key" class="w-9 h-9 text-white"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 md:top-0 md:right-auto md:left-1/2 md:-translate-x-1/2 w-7 h-7 rounded-full bg-yellow-500 text-white text-xs font-black flex items-center justify-center border-2 border-slate-900">3</div>
+                            <h3 class="text-white font-bold text-lg mb-2">Get Your Login</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Receive your username, password and M3U playlist link within minutes.</p>
+                        </div>
+
+                        <div class="relative z-10 flex flex-col items-center text-center">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center mb-5 shadow-[0_0_25px_rgba(34,197,94,0.35)]">
+                                <i data-lucide="play-circle" class="w-9 h-9 text-white"></i>
+                            </div>
+                            <div class="absolute -top-2 -right-2 md:top-0 md:right-auto md:left-1/2 md:-translate-x-1/2 w-7 h-7 rounded-full bg-green-500 text-white text-xs font-black flex items-center justify-center border-2 border-slate-900">4</div>
+                            <h3 class="text-white font-bold text-lg mb-2">Start Watching</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Open your app, enter your credentials and enjoy 60,000+ channels instantly.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compatible Apps -->
+                    <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800">
+                        <h3 class="text-white font-bold text-xl mb-6 text-center">Works With These Apps</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                            <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                                <i data-lucide="tv" class="w-7 h-7 text-blue-400"></i>
+                                <span class="text-slate-300 text-xs font-medium text-center">IPTV Smarters</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                                <i data-lucide="monitor-play" class="w-7 h-7 text-purple-400"></i>
+                                <span class="text-slate-300 text-xs font-medium text-center">TiviMate</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                                <i data-lucide="cast" class="w-7 h-7 text-orange-400"></i>
+                                <span class="text-slate-300 text-xs font-medium text-center">GSE Player</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                                <i data-lucide="play" class="w-7 h-7 text-red-400"></i>
+                                <span class="text-slate-300 text-xs font-medium text-center">VLC Player</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                                <i data-lucide="smartphone" class="w-7 h-7 text-green-400"></i>
+                                <span class="text-slate-300 text-xs font-medium text-center">Smart IPTV</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                                <i data-lucide="airplay" class="w-7 h-7 text-sky-400"></i>
+                                <span class="text-slate-300 text-xs font-medium text-center">Kodi / XCIPTV</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="mt-10 text-center">
+                        <a href="https://wa.me/447878719652?text=I%20want%20to%20activate%20YANMRT%20IPTV" target="_blank" class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white rounded-2xl font-black text-xl transition-all transform hover:scale-105 shadow-[0_0_35px_rgba(220,38,38,0.4)] no-underline shine-effect relative overflow-hidden">
+                            <i data-lucide="zap" class="w-6 h-6 fill-current"></i> Activate My Subscription Now
+                        </a>
+                        <p class="text-slate-500 text-sm mt-4">Instant delivery · 24/7 support · Money-back guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEVICE GUIDE SECTION -->
+        <section id="guide" class="py-24 bg-slate-950 relative overflow-hidden border-t border-slate-800/50">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-red-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="container mx-auto px-4 relative z-10">
+
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold tracking-widest uppercase mb-5">
+                        <i data-lucide="book-open" class="w-3 h-3"></i> Step-by-Step Guides
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Download & Activate on Any Device</h2>
+                    <p class="text-slate-400 text-lg max-w-2xl mx-auto">Choose your device below and follow the simple steps to start streaming in minutes.</p>
+                </div>
+
+                <!-- Device Tabs -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12" id="device-tabs">
+                    <button onclick="showGuide('smarttv')" class="guide-tab active-tab px-5 py-2.5 rounded-full font-bold text-sm transition-all border border-slate-700 flex items-center gap-2" data-tab="smarttv">
+                        <i data-lucide="tv" class="w-4 h-4"></i> Smart TV
+                    </button>
+                    <button onclick="showGuide('android')" class="guide-tab px-5 py-2.5 rounded-full font-bold text-sm transition-all border border-slate-700 flex items-center gap-2" data-tab="android">
+                        <i data-lucide="smartphone" class="w-4 h-4"></i> Android
+                    </button>
+                    <button onclick="showGuide('ios')" class="guide-tab px-5 py-2.5 rounded-full font-bold text-sm transition-all border border-slate-700 flex items-center gap-2" data-tab="ios">
+                        <i data-lucide="tablet-smartphone" class="w-4 h-4"></i> iOS (iPhone/iPad)
+                    </button>
+                    <button onclick="showGuide('mag')" class="guide-tab px-5 py-2.5 rounded-full font-bold text-sm transition-all border border-slate-700 flex items-center gap-2" data-tab="mag">
+                        <i data-lucide="box" class="w-4 h-4"></i> MAG Device
+                    </button>
+                    <button onclick="showGuide('firestick')" class="guide-tab px-5 py-2.5 rounded-full font-bold text-sm transition-all border border-slate-700 flex items-center gap-2" data-tab="firestick">
+                        <i data-lucide="flame" class="w-4 h-4"></i> Fire Stick
+                    </button>
+                </div>
+
+                <!-- SMART TV GUIDE -->
+                <div id="guide-smarttv" class="guide-content max-w-4xl mx-auto">
+                    <div class="rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden">
+                        <div class="flex items-center gap-4 p-6 border-b border-slate-800 bg-gradient-to-r from-blue-600/10 to-transparent">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center">
+                                <i data-lucide="tv" class="w-7 h-7 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-black text-xl">Smart TV Guide</h3>
+                                <p class="text-slate-400 text-sm">Samsung · LG · Android TV · Philips</p>
+                            </div>
+                            <div class="ml-auto px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold">App: Hot IPTV</div>
+                        </div>
+                        <div class="p-6 md:p-8 space-y-5">
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Download Hot IPTV on your Smart TV</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">On your Smart TV go to the <span class="text-white font-semibold">App Store</span> (Samsung Smart Hub / LG Content Store). Search for <span class="text-white font-semibold">Hot IPTV</span> and click <span class="text-white font-semibold">Install</span>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Open the App & Find your MAC Address</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Launch <span class="text-white font-semibold">Hot IPTV</span>. On the home screen you will see your <span class="text-white font-semibold">MAC Address</span> displayed. Note it down — you will need it in the next step.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Go to the Activation Website</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">On your phone or computer open <a href="https://hotplayer.app/upload" target="_blank" class="text-blue-400 font-bold underline">hotplayer.app/upload</a>. Enter your <span class="text-white font-semibold">MAC Address</span> and the <span class="text-white font-semibold">M3U URL</span> we sent you after payment. Click <span class="text-white font-semibold">Save</span>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Restart the App & Watch!</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Go back to your Smart TV, close and reopen <span class="text-white font-semibold">Hot IPTV</span>. Your channels will load automatically. Enjoy 60,000+ channels in 4K!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 md:px-8 pb-8">
+                            <a href="https://wa.me/447878719652?text=I%20need%20help%20activating%20on%20Smart%20TV" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all no-underline text-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> Need Help? Contact Us on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANDROID GUIDE -->
+                <div id="guide-android" class="guide-content hidden max-w-4xl mx-auto">
+                    <div class="rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden">
+                        <div class="flex items-center gap-4 p-6 border-b border-slate-800 bg-gradient-to-r from-green-600/10 to-transparent">
+                            <div class="w-14 h-14 rounded-2xl bg-green-600/20 border border-green-500/30 flex items-center justify-center">
+                                <i data-lucide="smartphone" class="w-7 h-7 text-green-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-black text-xl">Android Guide</h3>
+                                <p class="text-slate-400 text-sm">Android Phone · Android TV Box · Tablet</p>
+                            </div>
+                            <div class="ml-auto px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-bold">App: IB Player</div>
+                        </div>
+                        <div class="p-6 md:p-8 space-y-5">
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Download IB Player</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Open the <span class="text-white font-semibold">Google Play Store</span>, search for <span class="text-white font-semibold">IB Player</span> and tap <span class="text-white font-semibold">Install</span>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Open IB Player & Get your MAC Address and Device Key</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Launch the app. On the home screen you will see your <span class="text-white font-semibold">MAC Address</span> and <span class="text-white font-semibold">Device Key</span>. Note both down.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Go to the Activation Website</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">On your browser go to <a href="https://iboplayer.pro/manage-playlists/login/" target="_blank" class="text-green-400 font-bold underline">iboplayer.pro/manage-playlists/login/</a>. Enter your <span class="text-white font-semibold">MAC Address</span> and <span class="text-white font-semibold">Device Key</span> then click <span class="text-white font-semibold">Login</span>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Add Playlist & Enter your URL</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Click <span class="text-white font-semibold">Add Playlist</span>. Paste the <span class="text-white font-semibold">M3U URL</span> we sent you after payment into the URL field. Click <span class="text-white font-semibold">Save</span>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Restart the App & Watch!</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Go back to <span class="text-white font-semibold">IB Player</span> on your device, close and reopen it. All your channels will load. Enjoy!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 md:px-8 pb-8">
+                            <a href="https://wa.me/447878719652?text=I%20need%20help%20activating%20on%20Android" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold transition-all no-underline text-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> Need Help? Contact Us on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iOS GUIDE -->
+                <div id="guide-ios" class="guide-content hidden max-w-4xl mx-auto">
+                    <div class="rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden">
+                        <div class="flex items-center gap-4 p-6 border-b border-slate-800 bg-gradient-to-r from-slate-500/10 to-transparent">
+                            <div class="w-14 h-14 rounded-2xl bg-slate-600/20 border border-slate-500/30 flex items-center justify-center">
+                                <i data-lucide="tablet-smartphone" class="w-7 h-7 text-slate-300"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-black text-xl">iOS Guide</h3>
+                                <p class="text-slate-400 text-sm">iPhone · iPad · Apple TV</p>
+                            </div>
+                            <div class="ml-auto px-3 py-1 rounded-full bg-slate-500/10 border border-slate-500/30 text-slate-300 text-xs font-bold">App: Hot Player</div>
+                        </div>
+                        <div class="p-6 md:p-8 space-y-5">
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-slate-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Download Hot Player</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Open the <span class="text-white font-semibold">App Store</span> on your iPhone or iPad. Search for <span class="text-white font-semibold">Hot Player</span> and tap <span class="text-white font-semibold">GET</span> to install it.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-slate-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Open Hot Player & Find your MAC Address</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Launch the app. On the home screen your <span class="text-white font-semibold">MAC Address</span> is displayed. Note it down for the next step.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-slate-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Go to the Activation Website</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Open your browser and go to <a href="https://hotplayer.app/upload" target="_blank" class="text-slate-300 font-bold underline">hotplayer.app/upload</a>. Enter your <span class="text-white font-semibold">MAC Address</span> and the <span class="text-white font-semibold">M3U URL</span> we sent you after payment. Click <span class="text-white font-semibold">Save</span>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Restart the App & Watch!</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Close and reopen <span class="text-white font-semibold">Hot Player</span> on your iPhone or iPad. Your channels and content will load instantly. Enjoy!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 md:px-8 pb-8">
+                            <a href="https://wa.me/447878719652?text=I%20need%20help%20activating%20on%20iOS" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-600 hover:bg-slate-500 text-white rounded-xl font-bold transition-all no-underline text-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> Need Help? Contact Us on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAG GUIDE -->
+                <div id="guide-mag" class="guide-content hidden max-w-4xl mx-auto">
+                    <div class="rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden">
+                        <div class="flex items-center gap-4 p-6 border-b border-slate-800 bg-gradient-to-r from-purple-600/10 to-transparent">
+                            <div class="w-14 h-14 rounded-2xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center">
+                                <i data-lucide="box" class="w-7 h-7 text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-black text-xl">MAG Device Guide</h3>
+                                <p class="text-slate-400 text-sm">MAG 250 · MAG 254 · MAG 322 · MAG 420</p>
+                            </div>
+                            <div class="ml-auto px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-bold">Portal Activation</div>
+                        </div>
+                        <div class="p-6 md:p-8 space-y-5">
+
+                            <!-- Important notice -->
+                            <div class="flex gap-3 p-4 rounded-xl bg-yellow-500/10 border border-yellow-500/30">
+                                <i data-lucide="alert-triangle" class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                                <p class="text-yellow-200 text-sm leading-relaxed"><span class="font-bold">Important:</span> To activate your MAG device we need your <span class="font-bold">MAC Address</span>. Once you send it to us via WhatsApp, we will give you the portal URL to enter on your device.</p>
+                            </div>
+
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-purple-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Find Your MAC Address</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Power on your MAG box. Go to <span class="text-white font-semibold">Settings → System Information</span>. You will see your <span class="text-white font-semibold">MAC Address</span> — it looks like: <span class="text-red-400 font-mono font-bold">00:1A:79:XX:XX:XX</span></p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-purple-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Send Us Your MAC Address</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Send your MAC address to us on WhatsApp. We will register it on our server and send you back the <span class="text-white font-semibold">Portal URL</span> within minutes.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-purple-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Enter the Portal URL</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">On your MAG box go to <span class="text-white font-semibold">Settings → System Settings → Servers → Portals</span>. Enter the <span class="text-white font-semibold">Portal URL</span> we sent you in the <span class="text-white font-semibold">Portal 1 URL</span> field.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-purple-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Restart & Connect</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Save the settings and <span class="text-white font-semibold">restart your MAG box</span>. It will automatically connect to the portal and load all your channels.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">You're All Set!</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Your MAG device is now activated and ready to stream all channels and content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 md:px-8 pb-8">
+                            <a href="https://wa.me/447878719652?text=Hi,%20I%20have%20a%20MAG%20device.%20My%20MAC%20address%20is%3A%20" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-bold transition-all no-underline text-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> Send My MAC Address on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIRE STICK GUIDE -->
+                <div id="guide-firestick" class="guide-content hidden max-w-4xl mx-auto">
+                    <div class="rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden">
+                        <div class="flex items-center gap-4 p-6 border-b border-slate-800 bg-gradient-to-r from-orange-600/10 to-transparent">
+                            <div class="w-14 h-14 rounded-2xl bg-orange-600/20 border border-orange-500/30 flex items-center justify-center">
+                                <i data-lucide="flame" class="w-7 h-7 text-orange-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-black text-xl">Amazon Fire Stick Guide</h3>
+                                <p class="text-slate-400 text-sm">Fire Stick 4K · Fire Stick Lite · Fire TV Cube</p>
+                            </div>
+                            <div class="ml-auto px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-bold">App: Hot Player</div>
+                        </div>
+                        <div class="p-6 md:p-8 space-y-5">
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-orange-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Enable "Apps from Unknown Sources"</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">On your Fire Stick go to <span class="text-white font-semibold">Settings → My Fire TV → Developer Options</span>. Turn on <span class="text-white font-semibold">Apps from Unknown Sources</span>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-orange-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Download the "Downloader" App</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Go back to the home screen. In the <span class="text-white font-semibold">Search bar</span> type <span class="text-white font-semibold">Downloader</span> (by AFTVnews). Install it — this app lets you sideload APKs on Fire Stick.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-orange-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Open Downloader & Get Hot Player</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Open <span class="text-white font-semibold">Downloader</span>. In the URL box type the Hot Player APK link we provide you on WhatsApp and tap <span class="text-white font-semibold">Go</span>. The APK will download automatically.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-orange-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Install Hot Player</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Once downloaded, tap <span class="text-white font-semibold">Install</span> on the prompt screen. After installation tap <span class="text-white font-semibold">Open</span> to launch Hot Player.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-orange-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">5</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Find your MAC Address</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">On the Hot Player home screen your <span class="text-white font-semibold">MAC Address</span> is displayed. Note it down.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-orange-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0">6</div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Activate at hotplayer.app/upload</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">On your phone or computer go to <a href="https://hotplayer.app/upload" target="_blank" class="text-orange-400 font-bold underline">hotplayer.app/upload</a>. Enter your <span class="text-white font-semibold">MAC Address</span> and the <span class="text-white font-semibold">M3U URL</span> we sent you after payment. Click <span class="text-white font-semibold">Save</span>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-9 h-9 rounded-xl bg-green-600 flex items-center justify-center font-black text-white text-sm flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Restart & Stream!</h4>
+                                    <p class="text-slate-400 text-sm leading-relaxed">Close and reopen <span class="text-white font-semibold">Hot Player</span> on your Fire Stick. Your 60,000+ channels will load automatically. Enjoy!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 md:px-8 pb-8">
+                            <a href="https://wa.me/447878719652?text=I%20need%20help%20activating%20on%20Fire%20Stick" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold transition-all no-underline text-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> Need Help? Contact Us on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -462,6 +1248,114 @@
 
     </div>
 
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+
+            <!-- Top grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
+
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-5">
+                        <div class="bg-gradient-to-tr from-red-600 to-orange-500 p-2 rounded-lg">
+                            <i data-lucide="play" class="w-5 h-5 text-white fill-current"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tighter text-white">YANMRT<span class="text-red-500">IPTV</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">The #1 IPTV service for premium live TV, sports, movies and series. 60,000+ channels. 4K quality. Zero buffering.</p>
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="mail" class="w-4 h-4 text-red-500 flex-shrink-0"></i>
+                        <a href="mailto:contact@yanmrtiptv.com" class="text-slate-400 hover:text-white text-sm transition-colors no-underline">contact@yanmrtiptv.com</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-green-500 flex-shrink-0"></i>
+                        <a href="https://wa.me/447878719652" target="_blank" class="text-slate-400 hover:text-white text-sm transition-colors no-underline">+44 7878 719652</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-5 text-sm uppercase tracking-widest">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Home</a></li>
+                        <li><a href="#features" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Features</a></li>
+                        <li><a href="#trending" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Trending</a></li>
+                        <li><a href="#movies" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Movies</a></li>
+                        <li><a href="#series" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Series</a></li>
+                        <li><a href="#pricing" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-white font-bold mb-5 text-sm uppercase tracking-widest">Support</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#guide" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Device Guide</a></li>
+                        <li><a href="#activation" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> How to Activate</a></li>
+                        <li><a href="#trusted" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Reviews</a></li>
+                        <li><a href="#contact" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Contact Us</a></li>
+                        <li><a href="https://wa.me/447878719652?text=I%20need%20support" target="_blank" class="text-slate-400 hover:text-red-500 text-sm transition-colors no-underline flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> 24/7 WhatsApp Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Plans & CTA -->
+                <div>
+                    <h4 class="text-white font-bold mb-5 text-sm uppercase tracking-widest">Our Plans</h4>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800">
+                            <span class="text-slate-300 text-sm font-medium">1 Month</span>
+                            <span class="text-white font-black">€19</span>
+                        </li>
+                        <li class="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800">
+                            <span class="text-slate-300 text-sm font-medium">6 Months</span>
+                            <span class="text-white font-black">€39</span>
+                        </li>
+                        <li class="flex items-center justify-between p-3 rounded-xl bg-gradient-to-r from-red-900/40 to-slate-900 border border-red-800/50">
+                            <div>
+                                <span class="text-slate-300 text-sm font-medium">1 Year</span>
+                                <span class="ml-2 text-[10px] text-green-400 font-bold bg-green-500/10 border border-green-500/30 px-1.5 py-0.5 rounded">BEST DEAL</span>
+                            </div>
+                            <span class="text-white font-black">€65</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/447878719652?text=I%20want%20to%20subscribe%20to%20YANMRT%20IPTV" target="_blank" class="block text-center w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-sm transition-all no-underline">
+                        Get Started Now
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-8"></div>
+
+            <!-- Compatible devices row -->
+            <div class="flex flex-wrap items-center justify-center gap-6 mb-8">
+                <span class="text-slate-600 text-xs uppercase tracking-widest font-bold">Works on</span>
+                <div class="flex items-center gap-2 text-slate-500 text-sm"><i data-lucide="tv" class="w-4 h-4"></i> Smart TV</div>
+                <div class="flex items-center gap-2 text-slate-500 text-sm"><i data-lucide="flame" class="w-4 h-4"></i> Fire Stick</div>
+                <div class="flex items-center gap-2 text-slate-500 text-sm"><i data-lucide="smartphone" class="w-4 h-4"></i> Android</div>
+                <div class="flex items-center gap-2 text-slate-500 text-sm"><i data-lucide="tablet-smartphone" class="w-4 h-4"></i> iPhone / iPad</div>
+                <div class="flex items-center gap-2 text-slate-500 text-sm"><i data-lucide="box" class="w-4 h-4"></i> MAG</div>
+                <div class="flex items-center gap-2 text-slate-500 text-sm"><i data-lucide="monitor" class="w-4 h-4"></i> PC / Mac</div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-slate-600 text-xs text-center md:text-left">© 2026 YANMRT IPTV. All rights reserved. For entertainment purposes only.</p>
+                <div class="flex items-center gap-1">
+                    <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-400 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-400 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-400 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-400 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-400 fill-current"></i>
+                    <span class="text-slate-500 text-xs ml-1">Rated 4.9/5 by 10,000+ customers</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize Icons
@@ -483,10 +1377,31 @@
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
 
+            // Device Guide Tabs
+            window.showGuide = function(device) {
+                document.querySelectorAll('.guide-content').forEach(el => el.classList.add('hidden'));
+                document.querySelectorAll('.guide-tab').forEach(el => {
+                    el.classList.remove('active-tab', 'bg-red-600', 'text-white', 'border-red-600');
+                    el.classList.add('text-slate-400', 'bg-transparent');
+                });
+                document.getElementById('guide-' + device).classList.remove('hidden');
+                const activeBtn = document.querySelector('[data-tab="' + device + '"]');
+                if (activeBtn) {
+                    activeBtn.classList.add('active-tab', 'bg-red-600', 'text-white', 'border-red-600');
+                    activeBtn.classList.remove('text-slate-400', 'bg-transparent');
+                }
+            };
+            // Set default active tab style
+            const defaultTab = document.querySelector('[data-tab="smarttv"]');
+            if (defaultTab) {
+                defaultTab.classList.add('bg-red-600', 'text-white', 'border-red-600');
+                defaultTab.classList.remove('text-slate-400');
+            }
+
             if(btn && menu) {
                 // 1. T7el w tsad l-menu mnin twrek 3la l-bouton
                 btn.addEventListener('click', (e) => {
-                    e.stopPropagation(); // Bach maytgalatch m3a l-click 3la beṛṛa
+                    e.stopPropagation(); // Bach maytgalatch m3a l-click 3la be\u7771 a
                     menu.classList.toggle('hidden');
                 });
 
